@@ -1,0 +1,20 @@
+<h2>{{repo.name}}</h2>
+
+<div>
+  Subscribers: {{repo.subscribers_count}}
+</div>
+
+<div>
+  
+ <a href ="#/main"> Back to Search</a>
+ <a href ="#/user/{{repo.owner.login}}">Back to {{repo.owner.login}}</a>
+  
+  <ul>
+    <li ng-repeat="user in repo.subscribers">
+      <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+      {{user.login}}
+    </li>
+  </ul>
+  
+</div>
+
